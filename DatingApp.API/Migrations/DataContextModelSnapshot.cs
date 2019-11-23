@@ -27,8 +27,6 @@ namespace DatingApp.API.Migrations
 
                     b.Property<bool>("IsMain");
 
-                    b.Property<string>("PublicId");
-
                     b.Property<string>("Url");
 
                     b.Property<int>("UserID");
@@ -49,7 +47,7 @@ namespace DatingApp.API.Migrations
 
                     b.Property<string>("Country");
 
-                    b.Property<DateTime>("DateOfBirth");
+                    b.Property<DateTime>("DataOfBirth");
 
                     b.Property<string>("Gender");
 
