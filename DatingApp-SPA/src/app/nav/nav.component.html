@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-primary" > <!--fixed-top bg-dark-->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" > <!--fixed-top bg-primary-->
   <div class="container"> <!-- put body into div container to get more on left and right margin-->
     <a class="navbar-brand" [routerLink]="['/home']" > Dating App</a>
 
@@ -17,9 +17,12 @@
 
 
     <div *ngIf ="loggedIn()" class="dropdown" dropdown>
-      <button class="dropdown-toggle" dropdownToggle > <!--where triangle dropdown to be clicked-->
+      <span class ="mr-2">
+        <img src ="{{photoUrl || '..//..//../assets/user.png'}}" alt =""> <!-- if null go to default photo-->
+      </span>
+      <a class="dropdown-toggle text-light"  dropdownToggle > <!--where triangle dropdown to be clicked-->
         Welcome {{authService.decodedToken?.unique_name | titlecase}}
-      </button>
+      </a>
 
 
       <div class="dropdown-menu mt-3" *dropdownMenu>
